@@ -1,0 +1,35 @@
+﻿@mixin box-shadow($boxshadow, $hovershadow) {
+  -webkit-box-shadow: $boxshadow;
+  -moz-box-shadow: $boxshadow;
+  box-shadow: $boxshadow;
+
+  &:hover {
+    -webkit-box-shadow: $hovershadow;
+    -moz-box-shadow: $hovershadow;
+    box-shadow: $hovershadow;
+  }
+}
+
+@mixin backdrop-filter(
+  $filter,
+  $fallBackBackground: $st_themeDarker,
+  $addFallback: true
+) {
+  backdrop-filter: $filter;
+  -webkit-backdrop-filter: $filter;
+
+  @if $addFallback == true {
+    @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+      background: $fallBackBackground;
+      opacity: 0.95;
+    }
+  }
+}
+
+@mixin firefox-filter($filter) {
+  @-moz-document url-prefix() {
+    @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+      filter: $filter;
+    }
+  }
+}

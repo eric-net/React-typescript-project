@@ -1,0 +1,299 @@
+// Variables
+// Variables should follow the `$shortansname-propertynameincamelcase` formula for
+// consistent naming. Ex: $bt-linkDisabledColor and $st_contentBoxShadow.
+//
+//
+
+// Font faces
+$st_scopeFontFamily: "Segoe UI", "Segoe UI Web (West European)", -apple-system,
+  BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+$st_semiboldFontFamily: "Segoe UI Semibold", "Segoe UI",
+  "Segoe UI Web (West European)", -apple-system, BlinkMacSystemFont, Roboto,
+  "Helvetica Neue", sans-serif;
+$st_bodyFontFamily: Arial, Helvetica, Sans-Serif;
+
+$st_fontWeightbold: 700;
+$st_fontWeightSemibold: 600;
+$st_fontWeightLight: 100;
+$st_fontWeightSemiLight: 300;
+
+
+// font sizes
+$st_heroFontSize: 64px;
+$st_focusTitleMFontSize: 40px;
+$st_focusTitleFontSize: 36px;
+$st_focusTitleSFontSize: 32px;
+$st_sectionTitleFontSize: 30px;
+$st_titleAltFontSize: 28px;
+$st_titleFontSize: 24px;
+$st_largeFontSize: 20px;
+$st_mediumLargeFontSize: 18px;
+$st_mediumFontSize: 16px;
+$st_standardFontSize: 14px;
+$st_secondaryFontSize: 12px;
+$st_metaFontSize: 10px;
+$st_titleMdFontSize: 22px;
+$st_headingMediumFontSize: 26px;
+$st_smMediumFontSize: 15px;
+
+
+//line heights (use font-size mixin)
+
+$st_lineHeights: (
+  $st_heroFontSize: 96px,
+  $st_focusTitleMFontSize: 52px,
+  $st_focusTitleFontSize: 44px,
+  $st_focusTitleSFontSize: 42px,
+  $st_sectionTitleFontSize: 40px,
+  $st_titleAltFontSize: 36px,
+  $st_titleFontSize: 32px,
+  $st_largeFontSize: 28px,
+  $st_mediumLargeFontSize: 24px,
+  $st_mediumFontSize: 22px,
+  $st_standardFontSize: 20px,
+  $st_secondaryFontSize: 16px,
+  $st_metaFontSize: 12px,
+);
+
+// theme colors
+// https://fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/7.0/theming-designer/index.html
+$st_themeDarker: #2c3c85;
+$st_themeDark: #3b52b4;
+$st_themeDarkAlt: #4661d5;
+$st_themePrimary: #4f6bed;
+$st_themeSecondary: #627cef;
+$st_themeTertiary: #92a4f4;
+$st_themeLight: #c7d1fa;
+$st_themeLighter: #e1e6fc;
+$st_themeLighterAlt: #f7f9fe;
+
+// foreground
+$st_neutralDark: #201f1e;
+$st_neutralPrimary: #323130;
+$st_neutralPrimaryAlt: #3b3a39;
+$st_neutralSecondary: #605e5c;
+$st_neutralTertiary: #a19f9d;
+
+// background
+$st_neutralTertiaryAlt: #c8c6c4;
+$st_neutralQuaternary: #d0d0d0;
+$st_neutralQuaternaryAlt: #e1dfdd;
+$st_neutralLight: #edebe9;
+$st_neutralLighter: #f3f2f1;
+$st_neutralLighterAlt: #faf9f8;
+$st_lightBlack: #464646;
+$st_greyBlack: #212121;
+$st_pinkLighter: #fdeaee;
+$st_offWhite: #fff5f2;
+$st_LightYellow: #FFF9E2;
+$st-deepPeach: #FFCCB1;
+$st-lightViolet: #D4BEF5;
+$st-sweetPink: #FFA2A6;
+$st-Soapstone: #FFFAF6;
+$st_skyBlue: #F0FBFF;
+
+
+// Gray Colors
+$st_lightGray10Color: $st_neutralLighterAlt;
+$st_lightGray20Color: $st_neutralLighter;
+$st_lightGray30Color: $st_neutralLight;
+$st_lightGray40Color: $st_neutralQuaternaryAlt;
+$st_lightGray50Color: #d2d0ce;
+$st_lightGray60Color: $st_neutralTertiaryAlt;
+$st_lightGray70Color: #cccccc;
+$st_lightGray90Color: $st_neutralTertiary;
+$st_lightGray120Color: #636363;
+$st_lightGray130Color: $st_neutralSecondary;
+$st_lightGray150Color: $st_neutralPrimaryAlt;
+$st_lightGray160Color: $st_neutralPrimary;
+$st_lightGray190Color: $st_neutralDark;
+
+$st_black: #000000;
+$st_white: #ffffff;
+
+$st_themeDarkAltSpecial: #334081;
+$st_themeDarkSpecial: #323b64;
+$st_themeDarkerSpecial: #252735;
+
+// Secondary Color
+$st_headerAccentColor: #0046ff;
+$st_attributionColor: #107c10;
+$st_severeWarningBackgroundColor: rgba(250, 65, 0, 0.2);
+$st_severeWarningColor: #d83b01;
+$st_errorBackgroundColor: rgba(245, 135, 145, 0.2);
+$st_errorColor: #a4262c;
+$st_successBackgroundColor: rgba(95, 210, 85, 0.2);
+$st_successColor: #107c10;
+$st_warningBackgroundColor: rgba(255, 200, 10, 0.2);
+$st_warningColor: #797775;
+$st_raisinBlack: #252525;
+
+// standard colors
+$st_primaryTextColor: $st_neutralPrimary;
+$st_secondaryTextColor: $st_neutralSecondary;
+$st_disabled: $st_neutralTertiary;
+$st_linkTextColor: $st_themeDarkAlt;
+$st_linkTextDarkColor: $st_themeDark;
+$st_titleColor: $st_neutralDark;
+$st_bodyDivider: $st_neutralLight;
+$st_bodyDividerDark: $st_neutralTertiary;
+$st_bodyBackground: #e5e5e5;
+$st_inputBorder: #8a8886;
+$st_inputHoverBorder: $st_neutralPrimary;
+
+// focus ring color
+$st_focusRingColor: $st_lightGray130Color;
+$st_focusBackground: $st_lightGray10Color;
+
+//High contrast colors
+$st_highContrastText: canvasText;
+$st_highContrastLinkText: linkText;
+$st_highContrastBackground: canvas;
+$st_highContrastFocusRingColor: buttontext;
+$st_highContrastSelectedBorder: highlight;
+$st_highContrastSelectedText: highlightText;
+$st_highContrastSelectedBackground: highlight;
+
+// overlay colors
+$st_overlayLight: rgba(255, 255, 255, 0.4);
+$st_overlayDark: rgba(0, 0, 0, 0.4);
+
+// Borders
+$st_lightGrayBorder: 1px solid $st_bodyDivider;
+$st_transparentBorder: 1px solid transparent;
+
+// Shadows
+$st_elevationDepth4: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1),
+  0px 1.6px 3.6px rgba(0, 0, 0, 0.13);
+$st_elevationDepth8: 0px 0.6px 1.8px rgba(0, 0, 0, 0.1),
+  0px 3.2px 7.2px rgba(0, 0, 0, 0.13);
+$st_elevationDepth16: 0px 1.2px 3.6px rgba(0, 0, 0, 0.1),
+  0px 6.4px 14.4px rgba(0, 0, 0, 0.13);
+$st_elevationDepth20: 0px 20px 20px -20px rgba(0, 0, 0, 0.2);
+$st_elevationDepth64: 0px 4.8px 14.4px rgba(0, 0, 0, 0.18),
+  0px 25.6px 57.6px rgba(0, 0, 0, 0.22);
+$st_specialDepth20: 0px 20px 20px -20px rgba(0, 0, 0, 0.2);
+$st_specialDepth30: 0px 30px 30px -20px rgba(0, 0, 0, 0.2);
+$st_specialDepth40: 0px 40px 40px -20px rgba(0, 0, 0, 0.2);
+$st_specialDepth60: 0px 60px 60px -30px rgba(0, 0, 0, 0.2);
+
+//spacing
+$st_spacing2: 2px;
+$st_spacing4: 4px;
+$st_spacing8: 8px;
+$st_spacing12: 12px;
+$st_spacing16: 16px;
+$st_spacing20: 20px;
+$st_spacing24: 24px;
+$st_spacing28: 28px;
+$st_spacing32: 32px;
+$st_spacing36: 36px;
+$st_spacing40: 40px;
+$st_spacing48: 48px;
+$st_spacing52: 52px;
+$st_spacing56: 56px;
+$st_spacing60: 60px;
+$st_spacing64: 64px;
+$st_spacing68: 68px;
+$st_spacing92: 92px;
+$st_spacing96: 96px;
+
+// Icon sizes
+$st_standardIconSize: 14px;
+$st_smallIconSize: 16px;
+$st_mediumIconSize: 20px;
+$st_largeIconSize: 24px;
+$st_xlargeIconSize: 32px;
+
+//heights
+$st_searchBarHeight: 56px;
+$st_topHeaderHeight: 90px;
+$st_topHeaderMobileHeight: 114px;
+$st_topHeaderTransparentHeight: 124px;
+$st_headerAndSearchBarHeight: #{$st_topHeaderHeight + $st_searchBarHeight};
+$st_tranparentTopModulePadding: #{$st_topHeaderTransparentHeight +
+  $st_searchBarHeight + $st_spacing16};
+$st_topHeaderTopPadding: 16px;
+$st_topHeaderLeftPadding: 8px;
+$st_topHeaderRightPadding: 8px;
+$st_logoWidth: 250px;
+$st_headerRightActionsWidth: 250px;
+$st_filtersTopPadding: $st_spacing28;
+$st_filtersStickyTopPadding: $st_spacing12;
+$st_filtersBottomPadding: $st_spacing12;
+$st_filterButtonHeight: $st_spacing40;
+
+// Width
+$st_pageMinWidth: 360px;
+$st_pageMaxWidth: 1920px;
+$st_carouselCardMobileWidth: 232px;
+$st_searchButtonWidth: 44px;
+
+//misc
+$st_headerZIndex: 900;
+$st_experienceModuleImgGradient: linear-gradient(
+  360deg,
+  rgba(0, 0, 0, 0.7) 26.93%,
+  rgba(0, 0, 0, 0) 64.38%
+);
+$st_oddColumnGradient: linear-gradient(180deg, rgba(213, 172, 255, 0.7) 0%, #FFFFFF 75.23%);
+$st_evenColumnGradient: linear-gradient(179.41deg, #EBEBEB 39.69%, #FFC7C2 99.69%);
+$st_btnGradientColor: linear-gradient(180deg, #D50820 0%, #D33074 100%);
+
+
+//breakpoints
+$st_breakpointSmallMobiles: 320px;
+$st_breakpointMediumMobiles: 480px;
+$st_breakpointTablets: 640px;
+$st_breakpointSmallDesktops: 1024px;
+$st_breakpointMediumDesktops: 1366px;
+$st_breakpointStandardDesktops: 1680px;
+$st_breakpointLargeDesktops: 1920px;
+
+// grid
+$st_gridGutter: 16px;
+$st_gridMargin: 32px;
+
+// misc colors
+$st_whiteHeaderColor: $st_lightGray190Color;
+
+// random color
+$st_tealColor: #008272;
+$st_primaryTealColor: #00809d;
+$st_purpleMediumColor: #8661c5;
+$st_turquoiseColor: #0098b9;
+$st_redMediumColor: #d83b01;
+$st_yellowDarkColor: #d29200;
+$st_yellowColor: #ffb900;
+$st_yellowLightColor: #fff100;
+$st_orangeColor: #d83b01;
+$st_orangeLightColor: #ea4300;
+$st_orangeLighterColor: #ff8c00;
+$st_redDarkColor: #a4262c;
+$st_redColor: #d13438;
+$st_magentaDarkColor: #5c005c;
+$st_magentaColor: #b4009e;
+$st_magentaLightColor: #e3008c;
+$st_purpleDarkColor: #32145a;
+$st_purpleColor: #5c2d91;
+$st_purpleLightColor: #b4a0ff;
+$st_blueDarkColor: #002050;
+$st_blueMidColor: #00188f;
+$st_blueColor: #0078d4;
+$st_blueLightColor: #00bcf2;
+$st_tealDarkColor: #004b50;
+$st_tealLightColor: #00b294;
+$st_greenDarkColor: #004b1c;
+$st_greenColor: #107c10;
+$st_greenLightColor: #bad80a;
+$st_greenWhiteColor: #e3ede2;
+$st_lightRedColor: #FF5050;
+$st_mediumGrey: #7D7D7D;
+$st_successColor: #2dcc24;
+$st_rejectColor: #FF0000;
+
+// font-weight
+$fontWeightLight:300;
+$st_lightPinkColor: #FFEFE9;
+$st_mediumBlackColor: #2E2E2E;
+

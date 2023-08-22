@@ -1,0 +1,68 @@
+@mixin highContrastOverride {
+  @media screen and (-ms-high-contrast: active) {
+    & {
+      @content;
+    }
+  }
+}
+
+@mixin highContrastBorder {
+  @include highContrastOverride {
+    border: 1px solid transparent !important;
+  }
+}
+
+@mixin highContrastSelectedText {
+  @include highContrastOverride {
+    color: $st_highContrastSelectedText !important;
+  }
+}
+
+@mixin highContrastSelectedBackground {
+  @include highContrastOverride {
+    background: $st_highContrastSelectedBackground !important;
+    forced-color-adjust: none;
+  }
+}
+
+@mixin highContrastText {
+  @include highContrastOverride {
+    color: $st_highContrastText !important;
+  }
+}
+
+@mixin highContrastBackground {
+  @include highContrastOverride {
+    background: $st_highContrastBackground !important;
+    forced-color-adjust: none;
+  }
+}
+
+@mixin highContrastBackgroundColorText {
+  @include highContrastOverride {
+    color: $st_highContrastBackground !important;
+  }
+}
+
+@mixin highContrastTextColorBackground {
+  @include highContrastOverride {
+    background: $st_highContrastText !important;
+    forced-color-adjust: none;
+  }
+}
+
+@mixin highContrastInverseStyles {
+  @include highContrastBackgroundColorText;
+  @include highContrastTextColorBackground;
+}
+
+@mixin highContrastSelectedStyles {
+  @include highContrastSelectedBackground();
+  @include highContrastSelectedText();
+}
+
+@mixin highContrastColorIgnore {
+  @include highContrastOverride {
+    forced-color-adjust: none;
+  }
+}

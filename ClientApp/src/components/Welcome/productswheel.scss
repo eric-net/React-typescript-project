@@ -1,0 +1,148 @@
+@import "../../scss/default.scss";
+
+.productsWheel {
+  @include flexCenterItems;
+  position: relative;
+}
+
+.centeredItem {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes clockwise-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes anti-clockwise-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.circlegraph {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.layer1circlegraph {
+  width: 360px;
+  height: 360px;
+  border: 2px solid #fff;
+  background: rgba(214, 243, 255, 0.56);
+}
+
+.layer1SvgCirclegraph {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    animation: clockwise-spin infinite 30s linear;
+}
+
+.svglayer {
+  @include flexCenterItems;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  margin: -24px;
+}
+
+.svglayer .svgIcon {
+  width: 20px;
+}
+
+.layer1Svgs .svgIcon {
+  animation: anti-clockwise-spin infinite 30s linear;
+}
+
+.layer2circlegraph {
+  width: 225px;
+  height: 225px;
+  border: 2px solid #fff;
+  background: rgba(214, 230, 255, 0.45);
+}
+
+.layer2SvgCirclegraph {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    animation: anti-clockwise-spin infinite 30s linear;
+}
+
+.layer2Svgs .svgIcon {
+  animation: clockwise-spin infinite 30s linear;
+}
+
+.layer3circlegraph {
+  width: 118px;
+  height: 118px;
+  border: 2px solid #fff;
+  background: rgba(214, 243, 255, 0.92);
+}
+
+.layer3SvgCirclegraph {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    animation: clockwise-spin infinite 22s linear;
+}
+
+.layer3Svgs .svgIcon {
+    animation: anti-clockwise-spin infinite 22s linear;
+    
+}
+
+.layer1SvgCirclegraph, .layer1Svgs .svgIcon,
+.layer2SvgCirclegraph, .layer2Svgs .svgIcon,
+.layer3SvgCirclegraph, .layer3Svgs .svgIcon {
+    &:hover, &:focus-visible {
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        -o-animation-play-state: paused;
+        animation-play-state: paused;
+        cursor: pointer;
+    }
+}
+
+.studioCenterLogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &.highConrrastMode {
+        display: none;
+    }
+}
+
+.blendMode {
+  mix-blend-mode: multiply;
+}
+
+.alphaMask {
+  mask-type: alpha;
+}
+/* web accessibility high contrast mode */
+@media screen and (forced-colors: active) {
+    .studioCenterLogo {
+        display: none;
+        &.highConrrastMode {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+@mixin focusBorder($color: $st_focusRingColor, $hoverStyle: true, $pos: 2px) {
+  @at-root {
+    #{&} {
+      & {
+        position: relative;
+        outline: 0;
+      }
+
+      @if $hoverStyle == true {
+        &:hover {
+          @include highContrastOverride {
+            @include outlineStyle($color, $pos);
+          }
+        }
+      }
+    }
+
+    .btFocusVisible #{&} {
+      &::-moz-focus-inner {
+        // Clear the focus border in Firefox. Reference: http://stackoverflow.com/a/199319/1436671
+        border: 0;
+      }
+
+      &:focus {
+        outline: 0 !important;
+        box-shadow: none !important;
+        @include outlineStyle($color, $pos);
+      }
+    }
+  }
+}
+
+@mixin selectedFocusBorder(
+  $color: $st_focusRingColor,
+  $hoverStyle: true,
+  $pos: 2px
+) {
+  @include focusBorder($color, $hoverStyle, $pos);
+}
+
+@mixin outlineStyle($color, $pos: 2px) {
+  &:after {
+    content: "";
+    outline: $color solid 2px;
+    position: absolute;
+    left: $pos;
+    top: $pos;
+    bottom: $pos;
+    right: $pos;
+    z-index: 1;
+    border-color: transparent;
+    pointer-events: none;
+  }
+}
+
+@mixin focusBackground($color: $st_focusBackground, $hoverStyle: true) {
+  @at-root {
+    #{&} {
+      position: relative;
+      @if $hoverStyle == true {
+        &:hover {
+          background-color: $color;
+          @include highContrastOverride {
+            @include outlineStyle(transparent, 2px);
+          }
+        }
+      }
+    }
+
+    .btFocusVisible #{&} {
+      @include highContrastOverride {
+        border: 0;
+        &::-moz-focus-inner {
+          // Clear the focus border in Firefox. Reference: http://stackoverflow.com/a/199319/1436671
+          border: 0;
+        }
+      }
+
+      &:focus {
+        outline: 0 !important;
+        background-color: $color;
+        &:after {
+          display: none;
+        }
+        @include highContrastOverride {
+          @include outlineStyle(transparent, 2px);
+          &:after {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

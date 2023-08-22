@@ -1,0 +1,34 @@
+﻿@import "../../../scss/default.scss";
+
+.jobSummary {
+    .subTitle {
+        color: $st_black;
+        font-size: $st_titleFontSize;
+        font-weight: $fontWeightLight;
+        line-height: getFontLineHeight($st_largeFontSize);
+        margin-bottom: 6px;
+    }
+
+    h2 {
+        color: $st_black;
+        font-size: $st_focusTitleFontSize;
+        font-weight: 400;
+        line-height: getFontLineHeight($st_sectionTitleFontSize);
+        margin-bottom: $st_spacing28;
+        text-transform: capitalize;
+
+        @media screen and (max-width: 1023px) {
+            font-size: $st_headingMediumFontSize;
+            line-height: getFontLineHeight($st_titleFontSize);
+            margin-bottom:20px;
+        }
+    }
+
+    p {
+        font-size: $st_mediumFontSize;
+        color: $st_black;
+        font-weight: $fontWeightLight;
+        line-height: getFontLineHeight($st_mediumLargeFontSize);
+        max-width: 350px;
+    }
+}

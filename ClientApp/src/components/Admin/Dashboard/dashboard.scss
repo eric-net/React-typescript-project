@@ -1,0 +1,161 @@
+﻿@import "../../../scss/default.scss";
+
+.adminContainer {
+    height: 100vh;
+    background: $st_white;
+
+    .appHeader {
+        position: static;
+        width: 100%;
+    }
+
+    .adminContent {
+        padding: 30px 0 0;
+
+        .rdt_TableRow {
+            &:hover {
+                background: #f5f5f5;
+            }
+        }
+
+
+        .form-control {
+            padding-top: 12px;
+            padding-bottom: 12px;
+
+            &.status-cell {
+                border-radius: 0;
+                font-size: $st_mediumFontSize;
+                color: $st_black;
+                padding: 5px 12px;
+                background-color: $st_white;
+                font-style: normal;
+                background-size: 13px 13px;
+                background-position: right 11px center;
+                border:0;
+            }
+        }
+
+        h2 {
+            font-size: $st_titleFontSize;
+            color: $st_black;
+            font-weight: 600;
+        }
+
+        .animate-loader {
+            margin: 100px 0;
+        }
+    }
+
+    .bMgaAx div:first-child {
+        white-space: pre-wrap;
+    }
+}
+
+.subHeader {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 30px 15px;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+.link-btn {
+    color: #566199;
+    &.pointer{
+        color:rgba($st_black,.87);
+        pointer-events:none;
+    }
+}
+.fwKvpK > div {
+    font-size: $st_largeFontSize;
+    font-weight: 600;
+    padding-top: 100px !important;
+}
+
+.filter-info {
+    display: flex;
+
+    .search-input {
+        margin-right: 20px;
+        width: 220px;
+    }
+
+    .input-selection {
+        margin-right: 20px;
+        width: 220px;
+    }
+
+    .reset-btn {
+        background: rgba($st_black,.05);
+        padding: 0 30px;
+        border-radius: 12px;
+        font-size: $st_mediumLargeFontSize;
+        cursor: pointer;
+    }
+}
+
+.statusCol {
+    border-radius: 0;
+    font-size: $st_smMediumFontSize;
+    color: $st_black;
+    padding: 5px 12px;
+    background-color: $st_white;
+    width: 100%;
+    font-weight: 350;
+    transition: border-color .15s ease-in-out;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+    line-height: getFontLineHeight( $st_mediumLargeFontSize);
+    border: 0;
+    position: relative;
+
+    &.approved:after, &.rejected:after {
+        content: '';
+        position: absolute;
+        top: 8px;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        right:7px;
+    }
+
+    &.approved:after {
+        background-color: $st_successColor;
+    }
+
+    &.rejected:after {
+        background-color: $st_rejectColor;
+    }
+}
+
+.center-box {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+}
+/* status dropdown in header column*/
+[data-column-id="4"].rdt_TableCol_Sortable,
+[data-column-id="9"].rdt_TableCol_Sortable {
+    overflow: visible;
+}
+
+
+.select-menu {
+     width: 100%;
+    .select-menu__control {
+        border-color: rgba($st_black,.12)
+    }
+    .select-menu__placeholder {
+        color: $st_black;
+        margin: 0;
+    }
+    .select-menu__indicator-separator {
+        background-color: rgba($st_black,.12)
+    }
+    .select-menu__indicator {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+}

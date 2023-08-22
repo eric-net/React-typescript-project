@@ -1,0 +1,138 @@
+@import "../../scss/default.scss";
+/* Responsive css */
+
+@include smallMobiles {
+  .svglayer {
+    width: 54px;
+    height: 54px;
+    margin: -27px;
+  }
+
+  .svglayer .svgIcon {
+    width: 40px;
+  }
+
+  .layer1circlegraph {
+    width: 540px;
+    height: 540px;
+  }
+  .layer1SvgCirclegraph {
+    width: 455px;
+    height: 455px;
+  }
+
+  .layer2circlegraph {
+    width: 360px;
+    height: 360px;
+  }
+  .layer2SvgCirclegraph {
+    width: 290px;
+    height: 290px;
+  }
+
+  .layer3circlegraph {
+    width: 210px;
+    height: 210px;
+  }
+  .layer3SvgCirclegraph {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@include mediumDesktops {
+  .svglayer {
+    width: 64px;
+    height: 64px;
+    margin: -32px;
+  }
+
+  .svglayer .svgIcon {
+    width: 50px;
+  }
+
+  .layer1circlegraph {
+    width: 780px;
+    height: 780px;
+  }
+  .layer1SvgCirclegraph {
+    width: 665px;
+    height: 665px;
+  }
+
+  .layer2circlegraph {
+    width: 550px;
+    height: 550px;
+  }
+  .layer2SvgCirclegraph {
+    width: 445px;
+    height: 445px;
+  }
+
+  .layer3circlegraph {
+    width: 320px;
+    height: 320px;
+  }
+  .layer3SvgCirclegraph {
+    width: 205px;
+    height: 205px;
+  }
+}
+
+@include standardDesktops {
+  .layer1SvgCirclegraph {
+    width: 900px;
+    height: 900px;
+  }
+
+  .svglayer {
+    width: 64px;
+    height: 64px;
+    margin: -32px;
+  }
+
+  .svglayer .svgIcon {
+    width: 60px;
+  }
+
+  .layer1circlegraph {
+    width: 1060px;
+    height: 1060px;
+  }
+
+  .layer2circlegraph {
+    width: 735px;
+    height: 735px;
+  }
+  .layer2SvgCirclegraph {
+    width: 590px;
+    height: 590px;
+  }
+
+  .layer3circlegraph {
+    width: 440px;
+    height: 440px;
+  }
+  .layer3SvgCirclegraph {
+    width: 325px;
+    height: 325px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .studioProducts .productImage {
+    top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .studioProducts .productImage {
+    top: 40px;
+  }
+
+  .studioProducts {
+    flex-direction: column-reverse;
+    padding-top:20px;
+    padding-bottom:20px;
+  }
+}

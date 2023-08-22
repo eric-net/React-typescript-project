@@ -1,0 +1,559 @@
+@import "./scss/default.scss";
+
+@include smallMobiles {
+  .header {
+    .headerContainer {
+      @include flexColumnSpaceBetween;
+      align-items: start;
+      padding: 12px;
+      .logo {
+        @include flexCenterSpace;
+        width: 200px;
+      }
+     
+      .stlogo {
+        width: 66px;
+        height: 15px;
+      }
+
+      .separator {
+        border-left: 1px solid #464646;
+        height: 22px;
+      }
+      .headerTxt {
+        @include font-size($st_titleFontSize);
+        font-weight: 350;
+        margin-top: 5px;
+        display: none;
+      }
+    }
+  }
+
+  .studioProducts {
+    @include flexColumn;
+    background: #f0fbff;
+    padding: 20px;
+
+    .productImage {
+      width: 100%;
+      position: relative;
+      .productImg {
+        display: block;
+      }
+    }
+  }
+
+  .studioCenterLogo svg {
+    height: 16px;
+  }
+
+  .studioInfo {
+    width: 100%;
+    .studioInfoTxt {
+      @include font-size($st_sectionTitleFontSize);
+      font-weight: 350;
+      margin: 16px 0;
+    }
+    .studioInfoSubTxt {
+      @include font-size($st_largeFontSize);
+      font-weight: 350;
+      margin: 16px 0 0;
+    }
+
+    img {
+      width: 60px;
+    }
+  }
+
+  .studioJobs {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 20px;
+
+    .roleInfo {
+      img {
+        width: 60px;
+      }
+
+      .roleInfoTxt {
+        @include font-size($st_sectionTitleFontSize);
+        font-weight: 350;
+        margin: 16px 0;
+      }
+      .roleInfoSubTxt {
+        @include font-size($st_largeFontSize);
+        font-weight: 350;
+        margin: 16px 0 0;
+      }
+
+      .roles h2 {
+        @include font-size($st_focusTitleFontSize);
+      }
+      .roles > img {
+        width: 80%;
+      }
+    }
+
+    .jobImage {
+      width: 100%;
+      margin: auto;
+    }
+  }
+
+  .jobApply {
+    padding: 20px 0;
+    .jobCard {
+      width: calc(100% - 80px);
+      padding: 40px;
+    }
+  }
+  .locInfo {
+    img.pin_icon {
+      width: 60px;
+    }
+    .locInfoTxt {
+      @include font-size($st_sectionTitleFontSize);
+      margin-top: 5px;
+      font-weight: 350;
+    }
+    .locInfoSubTxt {
+      @include font-size($st_largeFontSize);
+      margin: 10px 0;
+      font-weight: 350;
+    }
+  }
+  .studioLocations {
+    padding: 30px;
+  }
+  .locCards {
+    display: none;
+  }
+
+  .videosContainer {
+    h2 {
+      @include font-size($st_largeFontSize);
+    }
+  }
+
+  .campusVideos {
+    gap: 30px;
+    .videoCard {
+      width: 100%;
+    }
+  }
+
+  .design-container {
+    padding: 16px;
+    top: calc(50% - 80px);
+
+    .design-heading {
+      @include font-size($st_titleAltFontSize);
+      margin-top: 15px;
+      margin-bottom:5px;
+    }
+
+    .design-subtext {
+      @include font-size($st_largeFontSize);
+      font-weight: 350;
+
+      span {
+        font-weight: 600;
+      }
+    }
+    .design-link, .design-day-link {
+      @include font-size($st_mediumFontSize);
+      padding: 10px;
+      border-radius: 25px;
+      margin-top: 36px;
+    }
+  }
+
+  .bannerVideo {
+    display: none;
+  }
+
+  .mobileBanner {
+    display: block;
+  }
+}
+
+@include tablets {
+  .design-container {
+    padding: 16px;
+    top: calc(50% - 90px);
+    right: 10px;
+
+    .design-heading {
+      @include font-size($st_titleAltFontSize);
+      margin-top: 20px;
+    }
+  }
+  .studioLocations {
+    @include flexColumnSpaceBetween;
+  }
+  .locInfo {
+    @include flexSpaceBetween;
+  }
+  .locCards {
+    @include flexColumn;
+    gap: 20px;
+    img,
+    .player {
+      width: 200px !important;
+      height: 200px !important;
+    }
+    .row1,
+    .row2 {
+      gap: 20px;
+
+      > div {
+        gap: 20px;
+      }
+    }
+    .largeImg {
+      width: 420px !important;
+      height: 420px !important;
+    }
+  }
+}
+
+@include smallDesktops {
+  .bannerVideo {
+    display: block;
+  }
+  .mobileBanner {
+    display: none;
+  }
+
+  .studioProducts {
+    @include flexCenter;
+    flex-direction: row;
+    background: #f0fbff;
+    padding: 50px 40px;
+    height: 540px;
+    .productImage {
+      width: 56%;
+      right: 16%;
+    }
+  }
+
+  .studioInfo {
+    width: 500px;
+    img {
+      width: 90px;
+    }
+  }
+
+  .studioJobs {
+    @include flexRow;
+    padding: 150px 90px;
+
+    .roleInfo {
+      .roleInfoTxt {
+        @include font-size($st_titleFontSize);
+      }
+      .roleInfoSubTxt {
+        @include font-size($st_mediumLargeFontSize);
+        width: 340px;
+      }
+      .roles h2 {
+        font-size: 32px;
+      }
+      .roles > img {
+        width: 70%;
+      }
+    }
+
+    .jobImage {
+      width: 50%;
+    }
+  }
+
+  .studioInfo {
+    .studioInfoTxt {
+      @include font-size($st_titleAltFontSize);
+    }
+    .studioInfoSubTxt {
+      @include font-size($st_mediumLargeFontSize);
+      margin: 20px 0;
+    }
+    img {
+      width: 60px;
+    }
+  }
+  .jobApply {
+    padding: 70px 0;
+    .jobCard {
+      width: 714px;
+      padding: 65px 85px;
+    }
+  }
+  .locInfo {
+    .locInfoTxt {
+      @include font-size($st_titleFontSize);
+    }
+    .locInfoSubTxt {
+      @include font-size($st_mediumLargeFontSize);
+    }
+  }
+
+  .campusVideos {
+    gap: 60px;
+    .videoCard {
+      width: calc(50% - 30px);
+    }
+  }
+
+  .design-container {
+    padding: 20px 30px;
+    top: 15%;
+    right: 90px;
+
+    .design-heading {
+      @include font-size($st_titleAltFontSize);
+      margin-top: 35px;
+    }
+
+    .design-subtext {
+      @include font-size($st_mediumFontSize);
+      display: block;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    .design-link, .design-day-link {
+      @include font-size($st_largeFontSize);
+      padding: 20px 25px;
+      border-radius: 45px;
+      margin-top: 40px;
+    }
+  }
+}
+@include mediumDesktops {
+  .studioProducts {
+    padding: 0 40px;
+    height: 780px;
+  }
+
+  .studioCenterLogo svg {
+    height: 20px;
+  }
+
+  .studioJobs .roleInfo {
+    .roles h2 {
+      font-size: 40px;
+    }
+
+    .roles > img {
+      width: 60%;
+    }
+  }
+
+  .studioInfo {
+    .studioInfoTxt {
+      @include font-size($st_focusTitleFontSize);
+    }
+    .studioInfoSubTxt {
+      @include font-size($st_titleFontSize);
+    }
+  }
+  .productImage {
+    width: 45%;
+    top: 58px;
+    height: 100%;
+    position: relative;
+    .productImg {
+      display: none !important;
+    }
+  }
+  .studioLocations {
+    @include flexSpaceBetween;
+    flex-direction: row;
+    padding: 120px 90px;
+  }
+  .locInfo {
+    max-width: 450px;
+    display: block;
+  }
+  .locCards {
+    gap: 25px;
+    img,
+    .player {
+      width: 250px !important;
+      height: 250px !important;
+    }
+
+    .row1,
+    .row2 {
+      gap: 25px;
+
+      > div {
+        gap: 25px;
+      }
+    }
+
+    .largeImg {
+      width: 525px !important;
+      height: 525px !important;
+    }
+  }
+  .videosContainer {
+    h2 {
+      @include font-size($st_sectionTitleFontSize);
+      font-weight: 350;
+    }
+  }
+  .design-container {
+    padding: 40px 50px;
+
+    .design-heading {
+      @include font-size($st_focusTitleMFontSize);
+      margin-top: 35px;
+    }
+
+    .design-subtext {
+      @include font-size($st_titleFontSize);
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    .design-link , .design-day-link{
+      padding: 20px 35px;
+      border-radius: 45px;
+      margin-top: 60px;
+    }
+  }
+}
+@include standardDesktops {
+  .studioProducts {
+    height: 1060px;
+
+    .productImage {
+      top: 80px;
+    }
+  }
+
+  .studioCenterLogo svg {
+    height: 40px;
+  }
+
+  .studioJobs .roleInfo {
+    .roleInfoTxt {
+      @include font-size($st_titleAltFontSize);
+      font-weight: 350;
+    }
+    .roleInfoSubTxt {
+      @include font-size($st_largeFontSize);
+      font-weight: 350;
+      width: 358px;
+    }
+    .roles h2 {
+      font-size: 50px;
+    }
+    img {
+      width: 74px;
+    }
+  }
+  .studioInfo {
+    .studioInfoTxt {
+      @include font-size($st_focusTitleMFontSize);
+      font-weight: 350;
+      margin: 30px 0 20px;
+    }
+    .studioInfoSubTxt {
+      @include font-size($st_titleAltFontSize);
+      font-weight: 350;
+      margin: 30px 0 0;
+    }
+
+    img {
+      width: 90px;
+    }
+  }
+  .locInfo {
+    max-width: 560px;
+
+    .locInfoTxt {
+      @include font-size($st_titleAltFontSize);
+      font-weight: 350;
+    }
+    .locInfoSubTxt {
+      @include font-size($st_largeFontSize);
+      font-weight: 350;
+    }
+  }
+  .locCards {
+    img,
+    .player {
+      width: 300px !important;
+      height: 300px !important;
+    }
+
+    .row1,
+    .row2 {
+      gap: 30px;
+      > div {
+        gap: 30px;
+      }
+    }
+    .largeImg {
+      width: 630px !important;
+      height: 630px !important;
+    }
+  }
+
+  .videosContainer {
+    h2 {
+      @include font-size($st_focusTitleMFontSize);
+      font-weight: 350;
+    }
+  }
+  .design-container {
+    padding: 60px 50px 70px 60px;
+
+    .design-heading {
+      @include font-size($st_heroFontSize);
+      margin-top: 35px;
+    }
+
+    .design-subtext {
+      @include font-size($st_sectionTitleFontSize);
+
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+}
+@media (max-width: 639px) {
+  .studioJobs .jobImage {
+    margin: 50px auto;
+  }
+    .design-container .design-day-link, 
+    .design-container .design-link {
+        padding: 8px 30px 12px;
+    }
+    .studioInfo {
+        margin: 30px 0 50px;
+    }
+
+  .studioJobs .roleInfo .roles {
+    margin: 20px 0;
+    h2 {
+      font-size: 32px;
+    }
+  }
+
+  .jobApply {
+    padding: 100px 0;
+  }
+
+  .studioLocations,
+  .studio-culture {
+    padding: 50px 30px;
+  }
+}

@@ -1,0 +1,39 @@
+﻿// Disable text selection on double click
+@mixin disable-text-selection() {
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  -ms-user-select: none; /* IE10+ */
+}
+
+// Text ellipsis
+
+// Add display block or inline-block depends on the element
+@mixin singleLineEllipsis() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin multiLineEllipsis(
+  $lines-to-show: 2,
+  $font-size: $st_standardFontSize,
+  $addMaxHieght: false
+) {
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  @if ($addMaxHieght == true) {
+    max-height: getFontLineHeight($font-size) *
+      $lines-to-show; /* Fallback for non-webkit */
+  } @else {
+    height: getFontLineHeight($font-size) *
+      $lines-to-show; /* Fallback for non-webkit */
+  }
+  font-size: $font-size;
+  line-height: getFontLineHeight($font-size);
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}

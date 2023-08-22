@@ -1,0 +1,95 @@
+@import "../../scss/default.scss";
+
+@keyframes clock-wise {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes anti-clock-wise {
+  from {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+
+.studioProducts {
+    background: #c5efff;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width:1023px) {
+        padding-top: 50px;
+        padding-bottom: 90px;
+    }
+
+    .studioLogo {
+        position: absolute;
+        top: 581px;
+        left: 510px;
+        height: auto;
+
+        svg {
+            height: 40px;
+        }
+    }
+}
+
+    .studioInfo {
+        @include flexColumn;
+
+        .studioInfoTxt {
+            color: $st_black;
+        }
+
+        .studioInfoSubTxt {
+            color: $st_black;
+        }
+    }
+
+    .productImage img {
+        width: 100%;
+    }
+
+    .welcomeContent {
+        width: 510px;
+        margin-left: 20%;
+
+        img {
+            width: 90px;
+        }
+    }
+
+    .studioProducts .studioLogo {
+        position: absolute;
+        top: 581px;
+        left: 510px;
+        height: auto;
+    }
+
+    .studioProducts .studioLogo svg {
+        height: 40px;
+    }

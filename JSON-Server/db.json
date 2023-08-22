@@ -1,0 +1,121 @@
+{
+  "user": [
+    {
+      "FullName": "krishna",
+      "Email": "krishnainfo01@gmail.com",
+      "ResumeUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "PortfolioUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "Year_Experience": "1-5",
+      "LinkedinUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "JobLocation": "Noida",
+      "JobRole": "Design Research",
+      "JobStatus": "Pending",
+      "AppliedDate": "2023-08-22",
+      "id": 1
+    },
+    {
+      "FullName": "rahul",
+      "Email": "rahul.kumar@gmail.com",
+      "ResumeUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "PortfolioUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "Year_Experience": "10+",
+      "LinkedinUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "JobLocation": "Hyderabad",
+      "JobRole": "User Experience and Design",
+      "JobStatus": "Pending",
+      "AppliedDate": "2023-08-22",
+      "id": 2
+    },
+    {
+      "FullName": "pooja",
+      "Email": "pooja.singh@gmail.com",
+      "ResumeUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "PortfolioUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "Year_Experience": "0-1",
+      "LinkedinUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "JobLocation": "Bangalore",
+      "JobRole": "Design Engineering",
+      "JobStatus": "Pending",
+      "AppliedDate": "2023-08-22",
+      "id": 3
+    },
+    {
+      "FullName": "vishal",
+      "Email": "vishal@gmail.com",
+      "ResumeUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "PortfolioUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "Year_Experience": "1-5",
+      "LinkedinUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "JobLocation": "Hyderabad,Noida",
+      "JobRole": "Design Engineering",
+      "JobStatus": "Pending",
+      "AppliedDate": "2023-08-22",
+      "id": 4
+    },
+    {
+      "FullName": "megha",
+      "Email": "megha.singh@gmail.com",
+      "ResumeUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "PortfolioUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "Year_Experience": "0-1",
+      "LinkedinUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "JobLocation": "Bangalore,Noida",
+      "JobRole": "Design Research",
+      "JobStatus": "Pending",
+      "AppliedDate": "2023-08-22",
+      "id": 5
+    },
+    {
+      "FullName": "raj",
+      "Email": "raj@gmail.com",
+      "ResumeUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "PortfolioUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "Year_Experience": "0-1",
+      "LinkedinUrl": "Not Filled",
+      "JobLocation": "Hyderabad",
+      "JobRole": "Design Engineering",
+      "JobStatus": "Pending",
+      "AppliedDate": "2023-08-22",
+      "id": 6
+    },
+    {
+      "FullName": "sri",
+      "Email": "sri@gmail.com",
+      "ResumeUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "PortfolioUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "Year_Experience": "5-10",
+      "LinkedinUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "JobLocation": "Noida",
+      "JobRole": "User Experience and Design",
+      "JobStatus": "Pending",
+      "id": 7,
+      "AppliedDate": "2023-08-22"
+    },
+    {
+      "FullName": "hitesh",
+      "Email": "hitesh@gmail.com",
+      "ResumeUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "PortfolioUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "Year_Experience": "5-10",
+      "LinkedinUrl": "Not Filled",
+      "JobLocation": "Hyderabad",
+      "JobRole": "User Experience and Design",
+      "JobStatus": "Pending",
+      "AppliedDate": "2023-08-22",
+      "id": 8
+    },
+    {
+      "FullName": "mohit",
+      "Email": "mohit@gmail.com",
+      "ResumeUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "PortfolioUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "Year_Experience": "1-5",
+      "LinkedinUrl": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_bind",
+      "JobLocation": "Bangalore,Noida",
+      "JobRole": "User Experience and Design",
+      "JobStatus": "Pending",
+      "AppliedDate": "2023-08-22",
+      "id": 9
+    }
+  ]
+}

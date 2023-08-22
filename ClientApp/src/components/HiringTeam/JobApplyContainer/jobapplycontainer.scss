@@ -1,0 +1,80 @@
+﻿@import "../../../scss/default.scss";
+
+.jobApplyContainer {
+    padding: 30px;
+    max-width: 1260px;
+    border-radius: 12px;
+    z-index: 10;
+    flex-direction: column;
+    height: 787px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    z-index: 10;
+    top: 0;
+    transition: all 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    @media screen and (max-width: 1199px) {
+        overflow-y:auto;
+    }
+    @media screen and (max-width: 1023px) {
+        width: 100%;
+        padding: 15px;
+        border-radius: 0;
+        height: 100%;
+    }
+    .jobApplyForm {
+        display: flex;
+        background: $st_white;
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        height:100%;
+        @media screen and (max-width: 1023px) {
+            flex-direction: column;
+            border-radius: 9px;
+            overflow-y: auto;
+            height: 100%;
+        }
+        .leftSection {
+            width: 34%;
+            flex: none;
+            padding: 30px 40px;
+            background: $st-Soapstone;
+            border-radius: 12px 0 0 12px;
+            @media screen and (max-width: 1599px) {
+                width: 32%;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            @media screen and (max-width: 1400px) {
+                width: 30%;
+            }
+            @media screen and (max-width: 1200px) {
+                width: 40%;
+            }
+            @media screen and (max-width: 1023px) {
+                width: 100%;
+                border-radius: 9px 9px 0 0;
+            }
+        }
+        .rightSection {
+            padding: 0 0 30px;
+            background: $st_white;
+            flex: 1;
+            border-radius: 0 12px 12px 0;
+            position: relative;
+        }
+    }
+}
+.form-error {
+    color: $st_lightRedColor;
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    justify-content: center;
+    font-size: $st_largeFontSize;
+    padding-top:30px;
+}

@@ -1,0 +1,50 @@
+﻿@import "../scss/default.scss";
+body {
+    .menuButton {
+        padding: 5px 5px 5px 12px;
+        width: 100%;
+        border: 1px solid rgba($st_black,.12);
+        justify-content: space-between;
+        color: #000;
+        font-size: 15px;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-family: $st_scopeFontFamily;
+    }
+
+    .MuiMenu-list {
+        padding: 16px;
+
+        .MuiFormControl-root {
+            &:first-child {
+                padding-right: 10px;
+            }
+        }
+
+        .MuiRadio-root, .PrivateSwitchBase-root-1 {
+            padding: 6px
+        }
+
+        .MuiFormLabel-root {
+            padding-bottom: 8px;
+        }
+
+        .MuiTypography-body1 {
+            font-size: $st_smMediumFontSize;
+            font-family: $st_scopeFontFamily;
+            color: rgba($st_black,.87)
+        }
+
+        .Mui-checked + .MuiFormControlLabel-label {
+            color: rgba($st_black,1)
+        }
+
+        .Mui-checked + .MuiFormControlLabel-label.Mui-disabled {
+            color: rgba($st_black,.3);
+        }
+    }
+
+    .MuiFormControlLabel-label.Mui-disabled {
+        color: rgba($st_black,.3);
+    }
+}

@@ -1,0 +1,40 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img,
+ol,
+ul,
+li,
+form,
+table,
+tr,
+th,
+td,
+blockquote,
+input,
+button,
+fieldset {
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  font-size: 100%;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

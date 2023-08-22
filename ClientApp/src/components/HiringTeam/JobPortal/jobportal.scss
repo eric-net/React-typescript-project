@@ -1,0 +1,325 @@
+﻿@import "../../../scss//default.scss";
+
+
+.jobportal {
+    padding: 30px 15px 0 15px;
+    background: $st_white;
+    position: relative;
+
+    @media screen and (max-width: 1023px) {
+        padding: 20px 10px 0;
+    }
+
+    .MuiSelect-nativeInput, .MuiInput-underline:before, .MuiInput-underline:after {
+        display: none;
+    }
+
+    .MuiInputBase-root {
+        color: $st_mediumGrey;
+        font-style: italic;
+        font-weight: 350;
+        @include font-type($st_scopeFontFamily, $st_largeFontSize);
+        padding: 0;
+    }
+
+    .MuiSelect-selectMenu {
+        padding: 19px 20px;
+
+        @media screen and (max-width: 1023px) {
+            padding-top:15px;
+            padding-bottom:15px;
+        }
+    }
+
+    .isSelected .MuiSelect-selectMenu {
+        color: $st_black;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    .MuiSelect-icon {
+        right: 15px;
+    }
+
+    .MuiSelect-select:focus {
+        background-color: transparent;
+        color: $st_black;
+    }
+
+    .form-row {
+        &.jobLocation {
+            .form-col {
+                width: 100%;
+            }
+        }
+
+        .form-col {
+            float: left;
+            width: 50%;
+            padding: 0 15px;
+
+            @media screen and (max-width: 1023px) {
+                padding: 0 10px;
+            }
+
+            @media screen and (max-width: 767px) {
+                width: 100%;
+            }
+
+            .form-group {
+                margin-bottom: 45px;
+
+                @media screen and (max-width: 1023px) {
+                    margin-bottom: 30px;
+                }
+
+                label {
+                    font-size: $st_largeFontSize;
+                    line-height: getFontLineHeight( $st_mediumLargeFontSize);
+                    color: $st_black;
+                    padding-bottom: 12px;
+                    display: inline-block;
+                    font-weight: 350;
+                    position: relative;
+                    cursor: pointer;
+
+                    @media screen and (max-width: 1023px) {
+                        font-size: $st_mediumLargeFontSize;
+                    }
+                }
+
+                .required {
+                    color: $st_lightRedColor;
+                    font-size: $st_largeFontSize;
+                    position: absolute;
+                    top: -1px;
+                    right: -10px;
+
+                    @media screen and (max-width: 1650px) {
+                        font-size: $st_mediumLargeFontSize;
+                    }
+                }
+
+                .form-check-box {
+                    display: flex;
+
+                    @media screen and (max-width: 1023px) {
+                        flex-direction: column;
+                    }
+
+                    label {
+                        padding-bottom: 0;
+                        font-weight: 300;
+                        margin-left: 0;
+                        display: flex;
+                        flex: 1;
+                        justify-content: space-between;
+
+                        .MuiTypography-body1 {
+                            @include font-type($st_scopeFontFamily, $st_largeFontSize);
+                            color: $st_black;
+                            font-weight: 350;
+                        }
+
+                        &.form-control {
+                            padding: 12px 20px;
+                            margin-left: 30px;
+
+                            @media screen and (max-width: 1023px) {
+                                margin-bottom: 20px;
+                                margin-left: 0;
+                            }
+
+                            &:first-child {
+                                margin-left: 0;
+                            }
+
+                            input[type="checkbox"] {
+                                :focus-visible {
+                                    outline: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .submit-form {
+        text-align: center;
+    }
+
+    .close-model {
+        width: 57px;
+        height: 57px;
+        position: absolute;
+        right: -20px;
+        top: -20px;
+        z-index: 10;
+        background: $st_white;
+        cursor: pointer;
+        background: $st-Soapstone;
+        box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 1023px) {
+            position: fixed;
+            top: 5px;
+            right: 5px;
+        }
+
+        &:focus {
+            outline: 0;
+        }
+    }
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 19px 20px;
+    font-weight: 400;
+    appearance: none;
+    transition: border-color .15s ease-in-out;
+    background: $st_white;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    color: $st_black;
+    line-height: getFontLineHeight( $st_mediumLargeFontSize);
+    border: 1px solid $st_white;
+    @include font-type($st_scopeFontFamily, $st_largeFontSize);
+
+    @media screen and (max-width: 1023px) {
+        font-size: $st_mediumLargeFontSize;
+        padding-top:14px;
+        padding-bottom:14px;
+    }
+
+    &.is-invalid {
+        border-color: $st_lightRedColor;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &::-webkit-input-placeholder, &::placeholder, :-ms-input-placeholder {
+        color: $st_mediumGrey;
+        font-style: italic;
+        font-weight: 350;
+        @include font-type($st_scopeFontFamily, $st_largeFontSize);
+    }
+
+    &:placeholder-shown {
+        text-overflow: ellipsis;
+    }
+
+
+    &:disabled {
+        background: $st_bodyBackground;
+        border-color: $st_bodyBackground;
+    }
+}
+
+
+    .error {
+        color: $st_lightRedColor;
+        font-size: $st_standardFontSize;
+        margin-top: 4px;
+        position: absolute;
+        bottom: auto;
+    }
+
+    select {
+
+        &.form-control {
+            position: relative;
+            color: rgba(125,125,125.5);
+            font-style: italic;
+            appearance: none;
+            -webkit-appearance: none;
+            font-weight: 350;
+            background: url('../../../img/arrow-icon.svg') right 20px center no-repeat;
+            background-size: 20px 16px;
+            padding-right: 35px;
+
+            &.active {
+                font-style: normal;
+                color: $st_black;
+                font-weight: 400;
+            }
+        }
+
+        &::-webkit-input-placeholder, &::placeholder, :-ms-input-placeholder {
+            color: $st_mediumGrey;
+            font-style: italic;
+            font-weight: 350;
+            @include font-type($st_scopeFontFamily, $st_largeFontSize);
+        }
+
+        option {
+            color: #000;
+        }
+    }
+
+
+    .btn-primary {
+        width: 540px;
+        height: 70px;
+        margin: 0 auto;
+        color: $st_white;
+        background: linear-gradient(180deg, #FB344B 0%, #D33074 100%);
+        box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
+        border-radius: 46px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: $st_largeFontSize;
+        line-height: getFontLineHeight( $st_mediumLargeFontSize);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .dots {
+            width: 2.5em;
+            margin-left: 10px;
+
+            div {
+                width: 0.5em;
+                height: 0.5em;
+                background: $st_white;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            width: 100%;
+        }
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    input::-webkit-input-placeholder {
+        color: #7D7D7D;
+        font-style: italic;
+        font-weight: 350;
+        @include font-type($st_scopeFontFamily, $st_largeFontSize);
+    }
+
+    #menu-Year_Experience {
+        .MuiMenu-list li:first-child {
+            display: none;
+        }
+
+        .MuiPaper-rounded {
+            border-radius: 12px;
+        }
+    }
+
+
+

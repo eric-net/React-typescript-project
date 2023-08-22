@@ -1,0 +1,47 @@
+@mixin responsive($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin smallMobiles {
+  @include responsive($st_breakpointSmallMobiles) {
+    @content;
+  }
+}
+
+@mixin mediumMobiles {
+  @include responsive($st_breakpointMediumMobiles) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @include responsive($st_breakpointTablets) {
+    @content;
+  }
+}
+
+@mixin smallDesktops {
+  @include responsive($st_breakpointSmallDesktops) {
+    @content;
+  }
+}
+
+@mixin mediumDesktops {
+  @include responsive($st_breakpointMediumDesktops) {
+    @content;
+  }
+}
+
+@mixin standardDesktops {
+  @include responsive($st_breakpointStandardDesktops) {
+    @content;
+  }
+}
+
+@mixin largeDesktops {
+  @include responsive($st_breakpointLargeDesktops) {
+    @content;
+  }
+}

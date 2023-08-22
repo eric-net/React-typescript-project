@@ -1,0 +1,240 @@
+@import "../../scss/default.scss";
+
+.appHeader {
+  @include flexCenterSpace;
+  background: $st_white;
+  border-radius: 0 0 7px 7px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0px;
+  left: 30px;
+  z-index: 7;
+  width: calc(100% - 60px);
+  height: 56px;
+  padding: 28px 24px;
+}
+
+.headerLogo {
+    @include flexCenter;
+    gap: 12px;
+    color: $st_lightBlack;
+}
+
+
+
+
+.VrLine {
+    height: 24px;
+    content: "";
+    border-right: 1px solid $st_lightBlack;
+}
+
+.studioLogo {
+    height: 17px;
+    position:relative;
+    top:-2px;
+    &.highConrrastMode {
+        display:none;
+    }
+}
+
+.headerRightContent {
+  @include font-size($st_standardFontSize);
+  position:relative;
+}
+
+.header-link {
+    @include font-size($st_standardFontSize);
+    color: $st_raisinBlack;
+    margin-left: 30px;
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+
+.hamburger {
+    width: 20px;
+    height: 20px;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+    z-index: 4;
+    display: none;
+    cursor: pointer;
+    position: relative;
+
+    .burger {
+        width: 100%;
+        height: 2px;
+        @include border-radius(2px);
+        background-color: $st_lightBlack;
+        transform-origin: 1px;
+        @include transition(all 0.3s linear);
+
+        .burger1 {
+            @include bt-transform(rotate(0));
+        }
+
+        .burger2 {
+            @include bt-transform(translateX(0));
+        }
+
+        .burger3 {
+            @include bt-transform(rotate(0));
+        }
+    }
+
+    &.active {
+        .burger1 {
+            @include bt-transform(rotate(45deg));
+        }
+
+        .burger2 {
+            opacity: 0;
+        }
+
+        .burger3 {
+            @include bt-transform(rotate(-45deg));
+        }
+    }
+}
+
+
+
+.mobileNav,.msQuotes {
+    display: none;
+}
+a.skip-main {
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin:0;
+    overflow: hidden;
+    position: absolute;
+    left:-130px;
+    width: 1px;
+ }
+
+a.skip-main:focus, a.skip-main:active {
+    clip: auto;
+    height: auto;
+    overflow: visible;
+    width: auto;
+    outline: none;
+    position: absolute;
+}
+
+@media (max-width:1023px) {
+
+    .appHeader {
+        position:fixed;
+        top:0;
+    }
+    .modal-open {
+        overflow: hidden;
+    }
+
+    .headerRightContent {
+        display: none;
+    }
+    
+
+    .hamburger {
+        @include flex;
+    }
+
+    .headerLogo {
+        position: relative;
+        z-index: 3;
+    }
+
+    .mobileNav {
+        position: fixed;
+        top: 0;
+        background: $st_greyBlack;
+        height: 100%;
+        width: 100%;
+        z-index: 3;
+        right: -100%;
+        @include transition(right 0.1s);
+        display: block;
+        max-height: 100%;
+        overflow-y: auto;
+
+        .headerRightContent {
+            display: block;
+            padding-left: 54px;
+            height: calc(100% - 160px);
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+
+            .header-link {
+                font-size: $st_sectionTitleFontSize;
+                margin-left: 0;
+                display: block;
+                color: $st_white;
+                margin-top: 22px;
+                font-weight: $st_fontWeightLight;
+                line-height: 46px;
+                text-align: left;
+                width:100%;
+            }
+        }
+
+        .msQuotes {
+            display: block;
+            padding-left: 54px;
+            position: absolute;
+            bottom: 60px;
+
+            img {
+                width: 43px;
+                margin-bottom: 2px;
+                position: relative;
+                left: -3px;
+            }
+
+            p {
+                color: $st_white;
+                font-size: $st_largeFontSize;
+                font-weight: $st_fontWeightLight;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+// Web Accessibility zoom level 400%
+@media (max-width: 480px) {
+    .appHeader {
+        width: calc(100% - 24px);
+        padding: 12px;
+        left: 12px;
+    }
+    .mobileNav {
+        .headerRightContent {
+            padding-left: 24px;
+        }
+        .msQuotes {
+            padding-left: 24px;
+        }
+    }
+}
+
+
+@media screen and (forced-colors: active) {
+
+    .studioLogo {
+        display: none;
+
+        &.highConrrastMode {
+            display: block;
+        }
+    }
+ }
+
+
+

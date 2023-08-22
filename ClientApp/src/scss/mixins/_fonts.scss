@@ -1,0 +1,16 @@
+@mixin font-type($family, $size: $st_standardFontSize) {
+  font-family: $family;
+  @include font-size($size);
+  @if $family == $st_semiboldFontFamily {
+    font-weight: $st_fontWeightSemibold;
+  }
+}
+
+@mixin font-size($size: $st_standardFontSize) {
+  font-size: $size;
+  line-height: map-get($st_lineHeights, $size);
+}
+
+@function getFontLineHeight($size) {
+  @return map-get($st_lineHeights, $size);
+}

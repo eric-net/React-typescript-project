@@ -1,0 +1,88 @@
+@mixin columnWidth($col) {
+  width: calc(#{(100 / 12) * $col}% - #{$st_gridGutter});
+  max-width: calc(#{(100 / 12) * $col}% - #{$st_gridGutter});
+}
+
+@mixin btContainer {
+  padding-right: $st_gridMargin;
+  padding-left: $st_gridMargin;
+}
+
+@mixin colBase {
+  margin-left: #{($st_gridGutter/2)};
+  margin-right: #{($st_gridGutter/2)};
+  flex-shrink: 0;
+}
+
+@mixin btRow {
+  @include flex;
+  flex-wrap: wrap;
+  width: calc(100% + #{$st_gridGutter});
+  margin-left: #{- ($st_gridGutter/2)};
+  margin-right: #{- ($st_gridGutter/2)};
+}
+
+@mixin btCol($noOfCol) {
+  @include colBase;
+  @include columnWidth($noOfCol);
+}
+
+@mixin carouselRow {
+  @include btRow;
+  flex-wrap: nowrap;
+}
+
+@mixin gridColumn($lgCol, $sdCol, $mdCol, $smCol, $smallCol: none) {
+  @include colBase;
+
+  @include smallMobiles {
+    @include columnWidth($smCol);
+  }
+
+  @if $smallCol != none {
+    @include smallDesktops {
+      @include columnWidth($smallCol);
+    }
+  }
+
+  @include mediumDesktops {
+    @include columnWidth($mdCol);
+  }
+
+  @include standardDesktops {
+    @include columnWidth($sdCol);
+  }
+
+  @include largeDesktops {
+    @include columnWidth($lgCol);
+  }
+}
+
+@mixin carouselColumn($smCol, $mdCol, $st_dCol, $lgCol, $smWidth: none) {
+  @include colBase;
+
+  @include smallMobiles {
+    @if $smWidth != none {
+      width: $smWidth;
+      max-width: $smWidth;
+    } @else {
+      @include columnWidth(12);
+    }
+  }
+
+  @include smallDesktops {
+    @include columnWidth($smCol);
+  }
+
+  @include mediumDesktops {
+    @include columnWidth($mdCol);
+  }
+
+  @include standardDesktops {
+    @include columnWidth($st_dCol);
+  }
+
+  @include largeDesktops {
+    @include columnWidth($lgCol);
+  }
+}

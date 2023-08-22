@@ -1,0 +1,112 @@
+// Add display block or inline-block depends on the element
+@mixin displayIB() {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin inlineFlex {
+  display: inline-flex;
+}
+
+@mixin flexColumn {
+  @include flex;
+  flex-direction: column;
+}
+
+@mixin flexRow {
+  @include flex;
+  flex-direction: row;
+}
+
+@mixin flexCenter {
+  @include flex;
+  align-items: center;
+}
+
+@mixin flexBaseline {
+  @include flex;
+  align-items: baseline;
+}
+
+@mixin flexContentCenter {
+  @include flex;
+  justify-content: center;
+}
+
+@mixin inlineFlexCenter {
+  @include inlineFlex;
+  align-items: center;
+}
+
+@mixin flexCC() {
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexCenterItems {
+  @include flex;
+  @include flexCC;
+}
+
+@mixin flexCenterSpace {
+  @include flexCenter;
+  justify-content: space-between;
+}
+
+@mixin flexSpaceBetween {
+  @include flex;
+  justify-content: space-between;
+}
+
+@mixin flexEnd {
+  @include flex;
+  justify-content: flex-end;
+}
+
+@mixin flexColumnCenter {
+  @include flexColumn;
+  align-items: center;
+}
+
+@mixin flexColumnContentCenter {
+  @include flexColumn;
+  justify-content: center;
+}
+
+@mixin flexColumnEnd {
+  @include flexColumn;
+  align-items: flex-end;
+}
+
+@mixin flexColumnCenterItems {
+  @include flexColumn;
+  @include flexCC;
+}
+
+@mixin flexColumnCenterSpace {
+  @include flexColumnCenter;
+  justify-content: space-between;
+}
+
+@mixin flexColumnSpaceBetween {
+  @include flexColumn;
+  justify-content: space-between;
+}
+
+@mixin flexSpaceAround {
+  @include flex;
+  justify-content: space-around;
+}
+
+@mixin flexAlignEnd {
+  align-items: flex-end;
+}
+
+@mixin flexColumnEndItems {
+  @include flexColumn;
+  justify-content: flex-end;
+}

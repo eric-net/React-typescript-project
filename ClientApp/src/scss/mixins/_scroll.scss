@@ -1,0 +1,32 @@
+@mixin no-scroll-bar() {
+  -ms-overflow-style: none; /* For IE*/
+  scrollbar-width: none; /* For Firefox */
+  &::-webkit-scrollbar {
+    /* For Chrome, Safari, Edge, and Opera*/
+    display: none;
+  }
+}
+
+@mixin show-scroll-bar {
+  -ms-overflow-style: auto; /* For IE*/
+  scrollbar-width: auto; /* For Firefox */
+  &::-webkit-scrollbar {
+    /* For Chrome, Safari, Edge, and Opera*/
+    display: block;
+  }
+}
+
+@mixin thin-scroll-bar($background: none, $width: 6px, $radius: 30px) {
+  &::-webkit-scrollbar {
+    width: $width;
+    border-radius: $radius;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: $radius;
+    @if $background != none {
+      background: $background;
+      @include highContrastTextColorBackground;
+    }
+  }
+}

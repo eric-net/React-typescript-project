@@ -1,0 +1,326 @@
+// common for studio portal
+
+
+@import "reset";
+@import "./default.scss";
+
+html {
+  min-height: 100%;
+  width: 100%;
+  min-width: $st_pageMinWidth;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+  @include largeDesktops {
+    box-shadow: $st_elevationDepth64;
+  }
+}
+
+body {
+  width: 100%;
+  @include font-type($st_scopeFontFamily, $st_standardFontSize);
+  color: $st_primaryTextColor;
+  height: 100%;
+}
+
+.main-container {
+  min-height: 100%;
+  width: 100%;
+  max-width: $st_pageMaxWidth;
+  min-width: $st_pageMinWidth;
+  margin: 0 auto;
+  position: relative;
+}
+
+.studio-hub-root {
+  height: 100%;
+  /*background: $st_bodyBackground;*/
+}
+
+.floatLeft {
+  float: left;
+}
+
+.floatRight {
+  float: right;
+}
+
+.floatNone {
+  float: none;
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+a {
+  @include focusBorder($st_focusRingColor, true, -2px);
+  text-decoration: none;
+}
+
+.bt-focusable {
+  @include focusBorder;
+}
+
+[role="button"] {
+  @include focusBorder;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sr-only {
+  bottom: 0;
+  left: -10000px;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.collapse-enter {
+  max-height: 0;
+}
+.collapse-enter-active {
+  max-height: 1000px;
+  transition: max-height 0.3s ease;
+}
+
+.collapse-exit {
+  max-height: 1000px;
+}
+.collapse-exit-active {
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+
+.chevronIcon {
+  transition: transform 0.2s linear;
+  &.rotate {
+    transform: rotate(180deg);
+  }
+}
+
+.secondary-text {
+  @include font-size($st_secondaryFontSize);
+  color: $st_secondaryTextColor;
+}
+
+.title-separator {
+  border-bottom: 2px solid $st_neutralTertiary;
+  width: 60px;
+  height: 0;
+  opacity: 0.5;
+  margin: $st_spacing32 auto;
+}
+
+.react-autosuggest__suggestions-container--open {
+  @include border-radius(2px);
+  @include font-type($st_scopeFontFamily, 14px);
+  border: $st_transparentBorder;
+  box-shadow: $st_elevationDepth4;
+  background: $st_white;
+  display: block;
+  position: absolute;
+  top: 32px;
+  width: 100%;
+  z-index: 2;
+}
+
+.react-autosuggest__suggestion {
+  cursor: pointer;
+  padding: 10px 12px;
+}
+
+.react-autosuggest__suggestion--highlighted {
+  background-color: $st_lightGray60Color;
+}
+
+.studio-modules-list {
+  > :nth-child(odd) {
+    background: $st_neutralLight;
+
+    .studio-module-title,
+    .studio-module-sub-title {
+      color: $st_primaryTextColor;
+    }
+    a.studio-module-sub-title {
+      color: $st_linkTextColor;
+    }
+
+    .studio-module-desc {
+      color: $st_secondaryTextColor;
+    }
+
+    .module-bg-element {
+      background: $st_neutralLight;
+    }
+
+    .module-sel-bg-element {
+      background: $st_lightGray40Color;
+    }
+
+    .module-clickable-element {
+      &:hover,
+      &:focus {
+        background: $st_lightGray40Color;
+      }
+    }
+
+    .em-scroll-container::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  &.transparent-first-module {
+    > :first-child {
+      background: $st_bodyBackground;
+
+      .module-bg-element {
+        background: $st_bodyBackground;
+      }
+    }
+  }
+
+  > :nth-child(even) {
+    background: $st_themeDarkerSpecial;
+
+    .studio-module-title,
+    .studio-module-sub-title {
+      text-shadow: $st_elevationDepth4;
+      color: $st_white;
+    }
+
+    .studio-module-desc {
+      text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+      color: $st_overlayLight;
+    }
+
+    .title-separator {
+      border-color: $st_white;
+    }
+
+    .module-bg-element {
+      background: $st_themeDarkerSpecial;
+    }
+
+    .module-sel-bg-element {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .module-clickable-element {
+      &:hover,
+      &:focus {
+        background: rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    .studio-filter-item {
+      border: 1px solid $st_white;
+      color: $st_white;
+
+      &.selected:not(:disabled) {
+        background: $st_white;
+        border: 1px solid $st_white;
+        color: $st_primaryTextColor;
+      }
+
+      &:focus,
+      &:hover {
+        color: $st_primaryTextColor;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.desktopOnly {
+  display: none;
+  @include smallDesktops {
+    display: block;
+  }
+}
+
+.desktopOnlyFlex {
+  display: none;
+  @include smallDesktops {
+    display: flex;
+  }
+}
+
+.mobileOnly {
+  display: block;
+  @include smallDesktops {
+    display: none;
+  }
+}
+.MicrosoftMap {
+  .CopyrightControl {
+    margin-right: $st_spacing32;
+  }
+}
+
+.map-terms-link {
+  @include font-size($st_metaFontSize);
+  position: absolute;
+  bottom: 10px;
+  right: $st_spacing24;
+  color: $st_black;
+  text-shadow: $st_white 1px 1px;
+  z-index: 100;
+}
+.suggestion-item-option {
+  @include flex;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.suggestion-text {
+  @include flexRow;
+}
+
+.suggestionbox-label {
+  @include smallDesktops {
+    @include font-size($st_mediumLargeFontSize);
+  }
+}
+
+.studio-search-callout {
+  width: 344px;
+  box-shadow: $st_elevationDepth8;
+  background: $st_white;
+  border-radius: $st_spacing32;
+  padding: $st_spacing36 $st_spacing32;
+}
+
+.studio-search-dropdown {
+  .ms-Callout-main {
+    border-radius: $st_spacing32;
+    box-shadow: $st_elevationDepth8;
+  }
+  button {
+    padding: $st_spacing20 $st_spacing32;
+    font-size: $st_mediumLargeFontSize;
+    &:first-child {
+      border-radius: $st_spacing32 $st_spacing32 0 0;
+      padding-top: $st_spacing32;
+    }
+
+    &:last-child {
+      border-radius: 0 0 $st_spacing32 $st_spacing32;
+      padding-bottom: $st_spacing32;
+    }
+  }
+}
